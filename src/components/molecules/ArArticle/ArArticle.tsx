@@ -14,10 +14,11 @@ export async function ArArticle(props: ArArticleProps) {
   const cookieStore = cookies();
   const loggedIn = cookieStore.get('loggedIn')?.value as CookieValue;
 
-  const { blog } = (await fetch('https://airnauts-blog.vercel.app/api').then((res) => res.json())) as { blog: string };
+  // https://airnauts-blog.vercel.app/api
+  const { blog } = (await fetch('http://localhost:3000/api').then((res) => res.json())) as { blog: string };
 
   return (
-    <p className={cn('bg-white mt-8  py-8 px-4 text-xl', satisfy.className)}>
+    <p className={cn('bg-white mt-8 py-8 px-4 text-xl', satisfy.className)}>
       {loggedIn === 'true' ? blog : `${blog.slice(0, 500)} ${'-'.repeat(blog.length - 500)}`}
     </p>
   );
