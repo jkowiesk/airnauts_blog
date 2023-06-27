@@ -32,7 +32,7 @@ export function ArMainLayout({ children }: ArMainLayoutProps) {
           }}
         >
           <ArHeader />
-          <main className="w-3/5 mx-auto">{children}</main>
+          <main className="w-1/3 mx-auto">{children}</main>
         </ArAppContextProvider>
       </body>
     </html>

@@ -8,6 +8,9 @@ dependencies:
   '@storybook/react':
     specifier: ^7.0.5
     version: 7.0.5(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+  clsx:
+    specifier: ^1.2.1
+    version: 1.2.1
   next:
     specifier: ^13.4.3
     version: 13.4.3(@babel/core@7.21.4)(react-dom@18.2.0)(react@18.2.0)
@@ -23,6 +26,9 @@ dependencies:
   sharp:
     specifier: ^0.32.0
     version: 0.32.0
+  tailwind-merge:
+    specifier: ^1.13.2
+    version: 1.13.2
 
 devDependencies:
   '@airnauts/style-guide':
@@ -1852,7 +1858,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.5
       '@types/react': 18.0.35
-      clsx: 1.1.0
+      clsx: 1.2.1
       focus-lock: 0.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -5910,6 +5916,10 @@ packages:
     resolution: {integrity: sha512-3avwM37fSK5oP6M5rQ9CNe99lwxhXDOeSWVPAOYF6OazUTgZCMb0yWlJpmdD74REy1gkEaFiub2ULv4fq9GUhA==}
     engines: {node: '>=6'}
     dev: true
+
+  /clsx@1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
 
   /collapse-white-space@1.0.6:
     resolution: {integrity: sha512-jEovNnrhMuqyCcjfEJA56v0Xq8SkIoPKDyaHahwo3POf4qcSXqMYuwNcOTzp74vTsR9Tn08z4MxWqAhcekogkQ==}
@@ -13311,6 +13321,10 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
     dev: true
+
+  /tailwind-merge@1.13.2:
+    resolution: {integrity: sha512-R2/nULkdg1VR/EL4RXg4dEohdoxNUJGLMnWIQnPKL+O9Twu7Cn3Rxi4dlXkDzZrEGtR+G+psSXFouWlpTyLhCQ==}
+    dev: false
 
   /tailwindcss@3.3.2(ts-node@10.9.1):
     resolution: {integrity: sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==}
