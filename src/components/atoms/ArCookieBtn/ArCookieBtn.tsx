@@ -1,10 +1,8 @@
 import React from 'react';
 import { setUserCookie } from 'helpers/setUserCookie';
 import { cookies } from 'next/headers';
-import { ArCookieBtnProps } from './ArCookieBtn.types';
 
-export function ArCookieBtn(props: ArCookieBtnProps) {
-  console.log(`ArCookieBtn ${props}`);
+export function ArCookieBtn() {
   const cookieStore = cookies();
 
   return (
