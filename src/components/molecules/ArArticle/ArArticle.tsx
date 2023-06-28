@@ -13,8 +13,9 @@ export async function ArArticle({ index }: ArArticleProps) {
   const cookieStore = cookies();
   const loggedIn = cookieStore.get('loggedIn')?.value as CookieValue;
 
-  // https://airnauts-blog.vercel.app/api
-  const { blog } = (await fetch(`http://localhost:3000/api/${index}`).then((res) => res.json())) as { blog: string };
+  const { blog } = (await fetch(`https://airnauts-blog.vercel.app/api/${index}`).then((res) => res.json())) as {
+    blog: string;
+  };
 
   return (
     <p className={cn('bg-white mt-8 py-8 px-4 text-xl', satisfy.className)}>
