@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArAppContextProvider } from 'contexts/ArAppContext';
 import { Metadata } from 'next';
 import { ArHeader } from 'components/organisms/ArHeader';
 import { ArMainLayoutProps } from './ArMainLayout.types';
@@ -17,23 +16,18 @@ export const ArMainLayoutMetadata: Metadata = {
     apple: '/apple-touch-icon.png',
     other: {
       rel: 'apple-touch-icon',
-      url: '/apple-touch-icon.png',
+      url: '/apple-touch-icon.pngp',
     },
   },
 };
 
-export function ArMainLayout({ children }: ArMainLayoutProps) {
+export function ArMainLayout({ children, modal }: ArMainLayoutProps) {
   return (
     <html lang="en">
       <body className="bg-neutral-800">
-        <ArAppContextProvider
-          initialState={{
-            count: 0,
-          }}
-        >
-          <ArHeader />
-          <main className="w-1/3 mx-auto">{children}</main>
-        </ArAppContextProvider>
+        <ArHeader />
+        <main className="w-screen min-h-screen pb-4 mt-[-4rem] pt-[8rem] ">{children}</main>
+        {modal}
       </body>
     </html>
   );

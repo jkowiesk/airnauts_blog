@@ -1,1 +1,1 @@
-export type ArHeaderProps = { }
+export type ArHeaderProps = {};
