@@ -1,8 +1,8 @@
 import React from 'react';
-import { cookies } from 'next/headers';
 import { cn } from 'components/utils/cn';
 import { Satisfy } from 'next/font/google';
-import { ArArticleProps, CookieValue } from './ArArticle.types';
+import { cookies } from 'next/headers';
+import { ArArticleProps } from './ArArticle.types';
 
 const satisfy = Satisfy({
   weight: '400',
@@ -10,16 +10,11 @@ const satisfy = Satisfy({
 });
 
 export async function ArArticle({ index }: ArArticleProps) {
-  const cookieStore = cookies();
-  const loggedIn = cookieStore.get('loggedIn')?.value as CookieValue;
-
-  const { blog } = (await fetch(`https://airnauts-blog.vercel.app/api/${index}`).then((res) => res.json())) as {
+  const { blog } = (await fetch(`http://localhost:3000/api/${index}`, {
+    headers: { Cookie: cookies().toString() },
+  }).then((res) => res.json())) as {
     blog: string;
   };
 
-  return (
-    <p className={cn('bg-white mt-8 py-8 px-4 text-xl', satisfy.className)}>
-      {loggedIn === 'true' ? blog : `${blog.slice(0, 500)} ${'-'.repeat(blog.length - 500)}`}
-    </p>
-  );
+  return <p className={cn('bg-white mt-8 py-8 px-4 text-xl', satisfy.className)}>{blog}</p>;
 }
