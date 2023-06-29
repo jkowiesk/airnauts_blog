@@ -1,10 +1,8 @@
 import React from 'react';
 import { ArCookieBtn } from 'components/atoms/ArCookieBtn';
 import Link from 'next/link';
-import { ArHeaderProps } from './ArHeader.types';
 
-export function ArHeader(props: ArHeaderProps) {
-  console.log('Header props:', props);
+export function ArHeader() {
   return (
     <nav className="w-full h-16 flex px-8 items-center justify-between bg-purple-800/50 rounded-b-2xl">
       <Link

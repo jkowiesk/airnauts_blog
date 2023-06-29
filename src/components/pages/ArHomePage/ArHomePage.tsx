@@ -1,14 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { ArHomePageProps } from './ArHomePage.types';
 
 export const ArHomePageMetadata: Metadata = {
   title: 'Homepage',
 };
 
-export function ArHomePage(props: ArHomePageProps) {
-  console.log('ArHomePage props:', props);
+export function ArHomePage() {
   return (
     <menu className="w-full grid grid-rows-3 grid-cols-1 place-items-center gap-12 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 h-full">
       <Link
