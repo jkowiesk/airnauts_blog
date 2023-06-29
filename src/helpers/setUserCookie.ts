@@ -2,10 +2,9 @@
 
 import 'server-only';
 
-import { cookies } from 'next/headers';
-
 export async function setUserCookie() {
-  const cookieStore = cookies();
+  console.log('XD');
+  /* const cookieStore = cookies();
   const loggedIn = cookieStore.get('loggedIn');
   if (!loggedIn) {
     cookieStore.set('loggedIn', 'true');
@@ -13,5 +12,5 @@ export async function setUserCookie() {
     cookieStore.set('loggedIn', 'false');
   } else {
     cookieStore.set('loggedIn', 'true');
-  }
+  } */
 }
