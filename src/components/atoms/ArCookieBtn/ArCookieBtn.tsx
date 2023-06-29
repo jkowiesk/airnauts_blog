@@ -1,10 +1,7 @@
 import React from 'react';
 import { setUserCookie } from 'helpers/setUserCookie';
-import { cookies } from 'next/headers';
 
 export function ArCookieBtn() {
-  const cookieStore = cookies();
-
   return (
     // @ts-expect-error Server Actions
     <form action={setUserCookie}>
@@ -12,7 +9,7 @@ export function ArCookieBtn() {
         type="submit"
         className="py-2 px-4 rounded-xl bg-red-300"
       >
-        {cookieStore.get('loggedIn')?.value === 'true' ? 'Logout' : 'Login'}
+        Log In/Out
       </button>
     </form>
   );
