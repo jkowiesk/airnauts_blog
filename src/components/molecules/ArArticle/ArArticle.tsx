@@ -10,7 +10,8 @@ const satisfy = Satisfy({
 });
 
 export async function ArArticle({ index }: ArArticleProps) {
-  const { blog } = (await fetch(`http://localhost:3000/api/${index}`, {
+  // https://airnauts-blog.vercel.app/api/
+  const { blog } = (await fetch(`https://airnauts-blog.vercel.app/api/${index}`, {
     headers: { Cookie: cookies().toString() },
   }).then((res) => res.json())) as {
     blog: string;
