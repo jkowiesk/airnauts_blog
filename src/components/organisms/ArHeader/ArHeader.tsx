@@ -11,7 +11,6 @@ export function ArHeader() {
       >
         AirArticles
       </Link>
-      <ArCookieBtn />
     </nav>
   );
 }
