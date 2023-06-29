@@ -1,16 +1,14 @@
 import React from 'react';
 import { setUserCookie } from 'helpers/setUserCookie';
 
-export function ArCookieBtn() {
+export async function ArCookieBtn() {
   return (
-    // @ts-expect-error Server Actions
-    <form action={setUserCookie}>
-      <button
-        type="submit"
-        className="py-2 px-4 rounded-xl bg-red-300"
-      >
-        Log In/Out
-      </button>
-    </form>
+    <button
+      type="submit"
+      onClick={() => setUserCookie()}
+      className="py-2 px-4 rounded-xl bg-red-300"
+    >
+      Log In/Out
+    </button>
   );
 }
