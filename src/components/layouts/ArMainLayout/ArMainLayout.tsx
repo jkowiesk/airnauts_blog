@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { ArHeader } from 'components/organisms/ArHeader';
 import { ArMainLayoutProps } from './ArMainLayout.types';
 
 import 'styles/globals.css';
@@ -24,6 +25,7 @@ export function ArMainLayout({ children, modal }: ArMainLayoutProps) {
   return (
     <html lang="en">
       <body className="bg-neutral-800">
+        <ArHeader />
         <main className="w-screen min-h-screen pb-4 mt-[-4rem] pt-[8rem] ">{children}</main>
         {modal}
       </body>
