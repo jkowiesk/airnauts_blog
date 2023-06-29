@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArCookieBtn } from 'components/atoms/ArCookieBtn';
 import Link from 'next/link';
 
 export function ArHeader() {
@@ -10,6 +11,7 @@ export function ArHeader() {
       >
         AirArticles
       </Link>
+      <ArCookieBtn />
     </nav>
   );
 }
