@@ -3,7 +3,9 @@
 import 'server-only';
 
 export async function setUserCookie() {
-  console.log('XD');
+  let a = 2;
+  a += 2;
+  return a;
   /* const cookieStore = cookies();
   const loggedIn = cookieStore.get('loggedIn');
   if (!loggedIn) {

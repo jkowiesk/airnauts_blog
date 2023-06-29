@@ -1,15 +1,15 @@
 import React from 'react';
-import { cookies } from 'next/headers';
+import { setUserCookie } from 'helpers/setUserCookie';
 
 export function ArCookieBtn() {
-  const cookieStore = cookies();
   return (
-    <form>
+    // @ts-expect-error Server Actions
+    <form action={setUserCookie}>
       <button
         type="submit"
         className="py-2 px-4 rounded-xl bg-red-200"
       >
-        {cookieStore.get('loggedIn')?.value === 'true' ? 'Logout' : 'Login'}
+        Sign In/Out
       </button>
     </form>
   );
