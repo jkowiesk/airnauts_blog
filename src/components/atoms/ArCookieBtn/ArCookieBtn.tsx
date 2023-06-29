@@ -1,7 +1,7 @@
 import React from 'react';
 import { setUserCookie } from 'helpers/setUserCookie';
 
-export async function ArCookieBtn() {
+export function ArCookieBtn() {
   return (
     <button
       type="submit"
