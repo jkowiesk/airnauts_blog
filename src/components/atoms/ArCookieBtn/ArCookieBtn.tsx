@@ -10,7 +10,7 @@ export function ArCookieBtn() {
     <form action={setUserCookie}>
       <button
         type="submit"
-        className="py-2 px-4 rounded-xl bg-red-200"
+        className="py-2 px-4 rounded-xl bg-red-300"
       >
         {cookieStore.get('loggedIn')?.value === 'true' ? 'Logout' : 'Login'}
       </button>
