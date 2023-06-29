@@ -1,6 +1,5 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { ArHeader } from 'components/organisms/ArHeader';
 import { ArMainLayoutProps } from './ArMainLayout.types';
 
 import 'styles/globals.css';
