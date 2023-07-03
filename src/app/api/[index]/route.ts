@@ -1,10 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { cookies } from 'next/headers';
 
 import { BLOGS } from 'assets/blogs';
 
-export async function GET(request: NextRequest, { params }: { params: { index: number } }) {
+export async function GET(req: NextRequest, { params }: { params: { index: number } }) {
   const { index } = params;
-  const loggedIn = (request.cookies.get('loggedIn')?.value || '') as string;
+
+  const cookieStore = cookies();
+
+  const loggedIn = cookieStore.get('loggedIn')?.value || '';
   const isLoggedIn = loggedIn === 'true';
 
   if (BLOGS.length <= index || index <= 0) {
